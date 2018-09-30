@@ -1,0 +1,50 @@
+{
+  "name": "SwiftNative",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "prestart": "rimraf web/dist",
+    "prebuild": "npm run prestart",
+    "start": "webpack-dev-server --config web/.config/webpack/config.js",
+    "build": "webpack --config web/.config/webpack/config.js",
+    "start:native": "node node_modules/react-native/local-cli/cli.js start",
+    "build:native": "node node_modules/react-native/local-cli/cli.js bundle",
+    "clean": "rimraf web/.cache",
+    "test": "jest"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "dependencies": {
+    "@babel/preset-env": "^7.1.0",
+    "react": "^16.5.0",
+    "react-dom": "^16.5.2",
+    "react-native": "0.57.1",
+    "react-native-web": "^0.9.1"
+  },
+  "devDependencies": {
+    "@babel/runtime": "^7.1.2",
+    "babel-jest": "23.6.0",
+    "babel-loader": "^8.0.4",
+    "cache-loader": "^1.2.2",
+    "circular-dependency-plugin": "^5.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "23.6.0",
+    "metro-react-native-babel-preset": "0.47.0",
+    "react-art": "^16.5.2",
+    "react-test-renderer": "16.5.0",
+    "rimraf": "^2.6.2",
+    "thread-loader": "^1.2.0",
+    "typescript": "^3.1.1",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
+  },
+  "optionalDependencies": {
+    "@types/jest": "^23.3.2",
+    "@types/react": "^16.4.14",
+    "@types/react-dom": "^16.0.8",
+    "@types/react-native": "^0.57.0"
+  }
+}

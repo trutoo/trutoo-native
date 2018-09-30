@@ -1,0 +1,12 @@
+{
+  "editor.formatOnSave": true,
+  "files.insertFinalNewline": true,
+  "html.format.wrapAttributes": "force",
+  "search.exclude": {
+    "**/node_modules": true,
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.format.insertSpaceBeforeFunctionParenthesis": false,
+  "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+  "editor.tabSize": 2,
+}
