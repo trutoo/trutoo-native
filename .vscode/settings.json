@@ -5,6 +5,8 @@
   "search.exclude": {
     "**/node_modules": true,
   },
+  "tslint.autoFixOnSave": true,
+  "tslint.enable": true,
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.format.insertSpaceBeforeFunctionParenthesis": false,
   "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
