@@ -5,7 +5,7 @@
       "type": "chrome",
       "request": "attach",
       "name": "Attach to client",
-      "url": "http://localhost:53197*",
+      "url": "http://localhost:8082*",
       "webRoot": "${workspaceFolder}/src",
       "port": 9222,
       "sourceMaps": true,

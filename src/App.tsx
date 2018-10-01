@@ -7,7 +7,7 @@
  */
 
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
+import { Platform, StyleSheet, Text, Image, View } from 'react-native';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -20,14 +20,13 @@ const instructions = Platform.select({
 type Props = {};
 export class App extends Component<Props> {
 
-  private ts: string = 'test';
-
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native for {Platform.OS}! yeee</Text>
+        <Text style={styles.welcome}>Welcome to React Native for {Platform.OS}!</Text>
         <Text style={styles.instructions}>To get started, edit App.js</Text>
         <Text style={styles.instructions}>{instructions}</Text>
+        <Image style={styles.logo} source={require('./assets/images/snake.png')} />
       </View>
     );
   }
@@ -38,16 +37,23 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#556270',
   },
   welcome: {
     fontSize: 20,
     textAlign: 'center',
+    color: '#E4A691',
     margin: 10,
   },
   instructions: {
     textAlign: 'center',
-    color: '#333333',
+    color: '#F7EFD8',
     marginBottom: 5,
   },
+  logo: {
+    marginTop: 64,
+    width: 128,
+    height: 128,
+    resizeMode: 'contain',
+  }
 });

@@ -8,6 +8,19 @@ module.exports = (env, argv) => {
 
   if (typeof env) env = {};
 
+  babel.presets.unshift(
+    [
+      '@babel/preset-env',
+      {
+        loose: true,
+        modules: false,
+        targets: {
+          electron: 3.0,
+        },
+      }
+    ],
+  );
+
   env.babel = babel;
 
   const configX = config(env, argv);

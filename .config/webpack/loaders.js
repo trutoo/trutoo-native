@@ -46,6 +46,13 @@ PostCSSLoaders = (env) => [
 
 Loaders = (env) => ([
   {
+    test: /\.(png|jpe?g|gif|svg|woff2?|ttf|eot|ico)$/,
+    loader: 'file-loader',
+    options: {
+      name: `assets/[${env.mode === 'production' ? 'hash' : 'name'}].[ext]`,
+    },
+  },
+  {
     test: /\.tsx?$/,
     exclude: /node_modules/,
     use: [
