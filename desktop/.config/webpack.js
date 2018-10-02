@@ -25,7 +25,7 @@ module.exports = (env, argv) => {
 
   const configX = config(env, argv);
 
-  configX.output.path = path.join(WEB_DIR, 'dist');
+  configX.output.path = path.join(WEB_DIR, 'build');
   configX.resolve.alias['react-native$'] = 'react-native-electron';
   configX.target = 'electron-renderer';
   if (IS_DEV_SERVER) configX.devServer.port = 8083;

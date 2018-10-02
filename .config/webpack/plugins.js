@@ -1,7 +1,7 @@
 const path = require('path');
 
 /* HELPERS */
-const { WEB_DIR, ROOT_DIR, IS_DEV_SERVER, PUBLIC_PATH } = require('./helpers');
+const { CONFIG_DIR, ROOT_DIR, IS_DEV_SERVER, PUBLIC_PATH } = require('./helpers');
 
 /* PLUGINS */
 const {
@@ -114,7 +114,7 @@ Plugins = (env) => ([
   // https://github.com/Realytics/fork-ts-checker-webpack-plugin/
   new ForkTsCheckerWebpackPlugin({
     tsconfig: path.join(ROOT_DIR, 'tsconfig.json'),
-    tslint: path.join(ROOT_DIR, 'tslint.json'),
+    tslint: path.join(CONFIG_DIR, 'tslint.json'),
     checkSyntacticErrors: true,
   }),
 

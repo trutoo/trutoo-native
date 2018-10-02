@@ -5,41 +5,67 @@ exports[`renders correctly 1`] = `
   style={
     Object {
       "alignItems": "center",
-      "backgroundColor": "#556270",
+      "backgroundColor": "#f5f2f0",
       "flex": 1,
       "justifyContent": "center",
     }
   }
 >
+  <Image
+    source={
+      Object {
+        "testUri": "../../../src/assets/images/logo.png",
+      }
+    }
+    style={
+      Object {
+        "height": 256,
+        "resizeMode": "contain",
+        "width": 256,
+      }
+    }
+  />
   <Text
     style={
       Object {
-        "color": "#E4A691",
+        "color": "#404040",
         "fontSize": 20,
         "margin": 10,
         "textAlign": "center",
       }
     }
   >
-    Welcome to React Native for 
+    Welcome to Trutoo Native for 
     ios
     !
   </Text>
   <Text
     style={
       Object {
-        "color": "#F7EFD8",
+        "color": "#666",
         "marginBottom": 5,
         "textAlign": "center",
       }
     }
   >
-    To get started, edit App.js
+    To get started, edit 
+    <Text
+      style={
+        Object {
+          "backgroundColor": "#556371",
+          "color": "#fbaa1f",
+          "fontFamily": "monospace",
+          "padding": 5,
+        }
+      }
+    >
+      src/App.tsx
+    </Text>
   </Text>
   <Text
     style={
       Object {
-        "color": "#F7EFD8",
+        "color": "#666",
         "marginBottom": 5,
         "textAlign": "center",
       }
@@ -48,20 +74,5 @@ exports[`renders correctly 1`] = `
     Press Cmd+R to reload,
 Cmd+D or shake for dev menu
   </Text>
-  <Image
-    source={
-      Object {
-        "testUri": "../../../src/assets/images/snake.png",
-      }
-    }
-    style={
-      Object {
-        "height": 128,
-        "marginTop": 64,
-        "resizeMode": "contain",
-        "width": 128,
-      }
-    }
-  />
 </View>
 `;

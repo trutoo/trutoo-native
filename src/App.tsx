@@ -7,7 +7,7 @@ const instructions = Platform.select({
   android:
     'Double tap R on your keyboard to reload,\n' +
     'Shake or press menu button for dev menu',
-  web: 'Just wait and enjoy the magic',
+  web: 'Press Cmd+R or Ctrl+R to reload',
 });
 
 type Props = {};
@@ -15,10 +15,10 @@ export class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native for {Platform.OS}!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
+        <Image style={styles.logo} source={require('./assets/images/logo.png')} />
+        <Text style={styles.welcome}>Welcome to Trutoo Native for {Platform.OS}!</Text>
+        <Text style={styles.instructions}>To get started, edit <Text style={styles.code}>src/App.tsx</Text></Text>
         <Text style={styles.instructions}>{instructions}</Text>
-        <Image style={styles.logo} source={require('./assets/images/snake.png')} />
       </View>
     );
   }
@@ -29,23 +29,28 @@ const styles = StyleSheet.create<IStyles>({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#556270',
+    backgroundColor: '#f5f2f0',
+  },
+  logo: {
+    width: 256,
+    height: 256,
+    resizeMode: 'contain',
   },
   welcome: {
     fontSize: 20,
     textAlign: 'center',
-    color: '#E4A691',
+    color: '#404040',
     margin: 10,
   },
   instructions: {
     textAlign: 'center',
-    color: '#F7EFD8',
+    color: '#666',
     marginBottom: 5,
   },
-  logo: {
-    marginTop: 64,
-    width: 128,
-    height: 128,
-    resizeMode: 'contain',
+  code: {
+    padding: 5,
+    fontFamily: 'monospace',
+    color: '#fbaa1f',
+    backgroundColor: '#556371',
   },
 });

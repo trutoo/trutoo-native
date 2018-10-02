@@ -1,17 +1,16 @@
 {
-  "name": "SwiftNative",
+  "name": "trutoo-native",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "webpack-dev-server --config web/.config/webpack.js",
     "build": "webpack --config web/.config/webpack.js",
+    "start:android": "react-native run-android",
+    "start:ios": "react-native run-ios",
     "start:desktop": "concurrently \"electron desktop/main.js\" \"webpack-dev-server --config desktop/.config/webpack.js\"",
     "build:desktop": "webpack --config desktop/.config/webpack.js",
-    "start:native": "react-native start",
-    "build:native": "react-native bundle",
-    "start:android": "react-native run-android",
-    "clean": "rimraf .cache",
-    "test": "jest --config=.config/jest.json"
+    "test": "jest --config=.config/jest.json",
+    "clean": "rimraf .cache"
   },
   "dependencies": {
     "@babel/preset-env": "^7.1.0",

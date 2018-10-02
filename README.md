@@ -1,4 +1,4 @@
-# Swift Native
+# Trutoo Native
 Crossplatform react native and web boiler plate
 
 ## Desktop

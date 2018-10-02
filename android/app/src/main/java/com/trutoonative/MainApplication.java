@@ -1,4 +1,4 @@
-package com.swiftnative;
+package com.trutoonative;
 
 import android.app.Application;
 

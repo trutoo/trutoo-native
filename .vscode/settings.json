@@ -4,7 +4,9 @@
   "html.format.wrapAttributes": "force",
   "search.exclude": {
     "**/node_modules": true,
+    ".cache": true,
   },
+  "tslint.configFile": ".config/tslint.json",
   "tslint.autoFixOnSave": true,
   "tslint.enable": true,
   "typescript.tsdk": "node_modules/typescript/lib",
