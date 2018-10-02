@@ -1,13 +1,6 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, Image, View } from 'react-native';
+import { Image, Platform, StyleSheet, Text, View } from 'react-native';
+import { IStyles } from './interfaces/styles';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -19,7 +12,6 @@ const instructions = Platform.select({
 
 type Props = {};
 export class App extends Component<Props> {
-
   render() {
     return (
       <View style={styles.container}>
@@ -32,7 +24,7 @@ export class App extends Component<Props> {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create<IStyles>({
   container: {
     flex: 1,
     justifyContent: 'center',
@@ -55,5 +47,5 @@ const styles = StyleSheet.create({
     width: 128,
     height: 128,
     resizeMode: 'contain',
-  }
+  },
 });

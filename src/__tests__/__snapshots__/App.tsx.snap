@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#556270",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#E4A691",
+        "fontSize": 20,
+        "margin": 10,
+        "textAlign": "center",
+      }
+    }
+  >
+    Welcome to React Native for 
+    ios
+    !
+  </Text>
+  <Text
+    style={
+      Object {
+        "color": "#F7EFD8",
+        "marginBottom": 5,
+        "textAlign": "center",
+      }
+    }
+  >
+    To get started, edit App.js
+  </Text>
+  <Text
+    style={
+      Object {
+        "color": "#F7EFD8",
+        "marginBottom": 5,
+        "textAlign": "center",
+      }
+    }
+  >
+    Press Cmd+R to reload,
+Cmd+D or shake for dev menu
+  </Text>
+  <Image
+    source={
+      Object {
+        "testUri": "../../../src/assets/images/snake.png",
+      }
+    }
+    style={
+      Object {
+        "height": 128,
+        "marginTop": 64,
+        "resizeMode": "contain",
+        "width": 128,
+      }
+    }
+  />
+</View>
+`;
