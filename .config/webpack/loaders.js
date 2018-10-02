@@ -53,7 +53,7 @@ Loaders = (env) => ([
     },
   },
   {
-    test: /\.tsx?$/,
+    test: /\.(j|t)sx?$/,
     exclude: /node_modules/,
     use: [
       {

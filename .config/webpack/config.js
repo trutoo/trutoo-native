@@ -42,14 +42,11 @@ module.exports = (env, argv) => {
     },
 
     resolve: {
-      alias: {
-        'assets': path.join(SOURCE_DIR, 'assets'),
-      },
       modules: [
         path.join(SOURCE_DIR),
         'node_modules',
       ],
-      extensions: ['.js', '.ts', '.tsx'],
+      extensions: ['.js', '.jsx', '.ts', '.tsx'],
     },
 
     module: {
