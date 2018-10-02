@@ -42,6 +42,7 @@ module.exports = (env, argv) => {
     },
 
     resolve: {
+      alias: {},
       modules: [
         path.join(SOURCE_DIR),
         'node_modules',
@@ -55,11 +56,6 @@ module.exports = (env, argv) => {
 
     plugins: Plugins(env),
 
-    performance: {
-      //hints: false, // Larger request better for HTTP but not for HTTP/2?
-    },
-
-    /*
     optimization: {
       runtimeChunk: 'single',
       splitChunks: {
@@ -70,18 +66,11 @@ module.exports = (env, argv) => {
             name: 'vendor',
             chunks: 'initial',
             enforce: true,
-            test: (module, chunks) => {
-              const moduleName = module.nameForCondition ? module.nameForCondition() : '';
-              return /[\\/]node_modules[\\/]/.test(moduleName)
-                && !chunks.some(({ name }) => {
-                  return name === 'polyfill';
-                });
-            },
+            test: /node_modules/,
           },
         },
       },
     },
-    */
   };
 
   if (IS_DEV_SERVER) {
@@ -89,7 +78,7 @@ module.exports = (env, argv) => {
       contentBase: path.join(process.cwd(), 'build'),
       host: '0.0.0.0',
       compress: true,
-      //noInfo: true,
+      noInfo: true,
       disableHostCheck: true,
       historyApiFallback: true,
       hot: env.environment === 'local',

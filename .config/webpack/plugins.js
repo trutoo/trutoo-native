@@ -1,4 +1,5 @@
 const path = require('path');
+const chalk = require('chalk');
 
 /* HELPERS */
 const { CONFIG_DIR, ROOT_DIR, IS_DEV_SERVER, PUBLIC_PATH } = require('./helpers');
@@ -18,6 +19,7 @@ const CircularDependencyPlugin = require('circular-dependency-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 
 //------------------------------------------------------------------------------------
 // PRODUCTION
@@ -127,8 +129,12 @@ Plugins = (env) => ([
 
   // Replaces build information with a progress bar
   // https://github.com/clessg/progress-bar-webpack-plugin/
-  // TODO: Reduce log output before enabling
-  // new ProgressBarPlugin(),
+  new ProgressBarPlugin({
+    width: 30,
+    complete: "▓",
+    incomplete: "░",
+    format: ` ${chalk.cyan.bold('Creating Magic')} ⟪ ${chalk.magenta(':bar')} ⟫ ${chalk.cyan.bold(':percent')}  `,
+  }),
 
 ]).concat(
   IS_DEV_SERVER

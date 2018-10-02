@@ -1,21 +1,6 @@
 /* HELPERS */
 const { CPUS } = require('./helpers');
 
-/* PLUGINS */
-
-
-/* POSTCSS
-const PostCSSVariablesPath = path.join(SOURCE_DIR, 'styles', 'postcss.variables.js');
-const PostCSSMediaPath = path.join(SOURCE_DIR, 'styles', 'postcss.media.js');
-const PostCSSMixinsPath = path.join(SOURCE_DIR, 'styles', 'postcss.mixins.js');
-
-/* FACTORIES
-function loadVariables() { return require(PostCSSVariablesPath); }
-function loadMedia() { return require(PostCSSMediaPath); }
-function loadMixins() { return require(PostCSSMixinsPath); }
-*/
-
-
 //------------------------------------------------------------------------------------
 // PRODUCTION
 //------------------------------------------------------------------------------------
@@ -29,14 +14,6 @@ ProductionLoaders = (env) => [
 //------------------------------------------------------------------------------------
 
 DevelopmentLoaders = (env) => [
-
-];
-
-//------------------------------------------------------------------------------------
-// POSTCSS
-//------------------------------------------------------------------------------------
-
-PostCSSLoaders = (env) => [
 
 ];
 
@@ -77,6 +54,5 @@ Loaders = (env) => ([
 module.exports = {
   ProductionLoaders,
   DevelopmentLoaders,
-  PostCSSLoaders,
   Loaders,
 };
