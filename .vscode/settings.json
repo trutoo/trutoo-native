@@ -1,16 +1,24 @@
 {
+  "docthis.includeMemberOfOnClassMembers": false,
+  "docthis.includeMemberOfOnInterfaceMembers": false,
   "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "files.associations": {
+    ".releaserc": "jsonc"
+  },
   "files.insertFinalNewline": true,
+  "highlight.regexes": {
+    "(Lang\\.[\\wåäöÅÄÖ.]+)": {
+      "color": "#98c379"
+    },
+    "(\\/\\/ ?(todo|ToDo|TODO):.+)": {
+      "color": "#ffa8e0"
+    }
+  },
   "html.format.wrapAttributes": "force",
   "search.exclude": {
-    "**/node_modules": true,
-    ".cache": true,
+    "**/node_modules": true
   },
-  "tslint.configFile": ".config/tslint.json",
-  "tslint.autoFixOnSave": true,
-  "tslint.enable": true,
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "typescript.format.insertSpaceBeforeFunctionParenthesis": false,
-  "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
-  "editor.tabSize": 2,
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
