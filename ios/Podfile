@@ -22,3 +22,12 @@ target 'TrutooNative' do
     flipper_post_install(installer)
   end
 end
+
+target 'TrutooNative-tvOS' do
+  # Pods for TrutooNative-tvOS
+
+  target 'TrutooNative-tvOSTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+end
