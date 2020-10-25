@@ -1,11 +1,7 @@
-/**
- * @format
- */
-
-import {hot} from 'react-hot-loader/root';
-import {AppRegistry} from 'react-native';
+import { hot } from 'react-hot-loader/root';
+import { AppRegistry } from 'react-native';
 import App from './src/App';
-import {name as appName} from './app.json';
+import { name as appName } from './app.json';
 
 const main = () => App;
 hot(main);

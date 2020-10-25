@@ -1,6 +1,7 @@
 {
   "docthis.includeMemberOfOnClassMembers": false,
   "docthis.includeMemberOfOnInterfaceMembers": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "editor.tabSize": 2,
   "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
@@ -17,8 +18,6 @@
     }
   },
   "html.format.wrapAttributes": "force",
-  "search.exclude": {
-    "**/node_modules": true
-  },
+  "prettier.disableLanguages": ["html"],
   "typescript.tsdk": "node_modules/typescript/lib"
 }

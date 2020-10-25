@@ -1,20 +1,9 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-  Platform,
-  Image,
-} from 'react-native';
+import { SafeAreaView, StyleSheet, ScrollView, View, Text, StatusBar, Platform, Image } from 'react-native';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
+  android: 'Double tap R on your keyboard to reload,\n' + 'Shake or press menu button for dev menu',
   web: 'Press Cmd+R or Ctrl+R to reload',
 });
 
@@ -23,29 +12,21 @@ const App = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
+        <ScrollView contentInsetAdjustmentBehavior="automatic" style={styles.scrollView}>
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
-              <Image
-                style={styles.image}
-                source={require('./assets/images/logo.png')}
-              />
-              <Text style={styles.sectionTitle}>
-                Welcome to Trutoo Native for {Platform.OS}!
-              </Text>
+              <Image style={styles.image} source={require('./assets/images/logo.png')} />
+              <Text style={styles.sectionTitle}>Welcome to Trutoo Native for {Platform.OS}!</Text>
               <Text style={styles.sectionDescription}>
-                To get started, edit{' '}
-                <Text style={styles.code}>src/App.tsx</Text>
+                To get started, edit <Text style={styles.code}>src/App.tsx</Text>
               </Text>
               <Text style={styles.sectionDescription}>{instructions}</Text>
             </View>
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>Step One</Text>
               <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.tsx</Text> to change
-                this screen and then come back to see your edits.
+                Edit <Text style={styles.highlight}>App.tsx</Text> to change this screen and then come back to see your
+                edits.
               </Text>
             </View>
           </View>

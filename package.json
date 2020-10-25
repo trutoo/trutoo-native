@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start:web": "webpack-dev-server --config web/webpack.config.js",
+    "start:web": "webpack serve --config web/webpack.config.js",
     "start:android": "react-native run-android",
     "start:ios": "react-native run-ios",
     "test": "jest",
